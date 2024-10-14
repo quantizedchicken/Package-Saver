@@ -5,3 +5,5 @@ A horrendously poorly made program to save packages installed with apt so they c
 cd to the source folder
 run ./install-aptsave
 done. optionally delete the source code directory, as it is no longer needed.
+
+alternatively just copy the program into /bin directy since this program is really simple.
