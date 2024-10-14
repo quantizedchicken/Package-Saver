@@ -1,0 +1,7 @@
+#!/bin/bash
+touch /tmp/aptlist
+touch ~/aptsave
+apt list --installed > /tmp/aptlist
+touch /tmp/aptsave.py
+printf "from pathlib import Path\naptconf=\"sudo apt update && sudo apt upgrade && sudo apt install\"\nq = open(\"/home/jamesb/aptsave\", \"w\")\ntxt = Path(\"/tmp/aptlist\").read_text()\nfile1 = open(\"/tmp/aptlist\", \"w\")\nfile = open(\"/tmp/aptlist\", \"a\")\ntxt=txt.split(\"\\\n\")\nfor x in range(len(txt)):\n\ttxt[x]=txt[x].split(\"/\")\n\ttxt[x]=txt[x][0]\nfile1.write(\"\")\nfile1.close()\ntxt=txt[1:-1]\nfor n in range(len(txt)):\n\taptconf+=\" \"+txt[n]\nq.write(aptconf);" > /tmp/aptsave.py
+python3 /tmp/aptsave.py
