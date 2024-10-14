@@ -1,2 +1,7 @@
 # Package-Saver
-Simple script to save packages installed with apt so they can more easily be restored on a different computer.
+A horrendously poorly made program to save packages installed with apt so they can more easily be restored on a different computer.
+
+  Install Instructions:
+cd to the source folder
+run ./install-aptsave
+done. optionally delete the source code directory, as it is no longer needed.
