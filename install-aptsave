@@ -1,2 +1,3 @@
 #!/bin/bash
 sudo cp aptsave /bin
+sudo chmod +x /bin/aptsave
